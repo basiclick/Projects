@@ -1,0 +1,22 @@
+﻿@{
+    var db = Database.Open("Games");
+
+    var GameName = Context.GetRouteValue("GameName");
+    if (GameName == null)
+    {
+        Response.Redirect("~/");
+    }
+
+    var SQLREAD = "SELECT * FROM Games WHERE GameName=@0";
+    var data = db.QuerySingle(SQLREAD, GameName);
+    var Id = data.Id;
+    var Text = data.Text;
+    Page.Title = data.Title;
+    Page.Description = data.Description;
+
+
+<h2>@data.GameName</h2>
+@Html.Raw(Text)
+<span>@data.ReleaseDate - <a href="/Update.cshtml?id=@Id">Edit Page</a> | <a href="/Delete.cshtml?id=@Id&returnurl=@Request.Url.AbsoluteUri">Delete Page</a></span>
+
+}

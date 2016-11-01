@@ -1,0 +1,71 @@
+﻿@{
+    var Id = Request["Id"];
+
+    if (!Id.IsInt())
+    {
+        Response.Redirect("~/");
+
+    }
+
+    var db = Database.Open("Games");
+    var SQLREAD = "SELECT * FROM Games WHERE Id=@0";
+    var data = db.QuerySingle(SQLREAD, Id);
+    var GameName = data.GameName;
+    var GameTitle = data.Title;
+    var GameDescription = data.Description;
+    var GameText = data.Text;
+
+        if (IsPost)
+
+
+    {
+        GameName = Request["GameName"];
+        GameTitle = Request["GameTitle"];
+        GameDescription = Request["GameDescription"];
+        GameText = Request.Unvalidated["GameText"];
+        Validation.RequireFields("GameName", "GameTitle", "GameDescription", "GameText");
+
+        var SQLUPDATE = "UPDATE Games SET GameName=@0, Title=@1, Description=@2, Text=@3 WHERE Id=@4";
+
+        if (Validation.IsValid())
+        {
+            try
+            {
+                db.Execute(SQLUPDATE, GameName, GameTitle, GameDescription, GameText, Id);
+                Response.Write("Data Saved!");
+
+            }
+
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+        }
+    }
+
+
+}
+
+<form method="post">
+    <fieldset>
+        <legend>Update Data</legend>
+        @Html.ValidationSummary(true)
+        <div>
+            <label>Game Name</label> <input type="text" value="@GameName" name="GameName" />
+            @Html.ValidationMessage("GameName")
+        </div>
+        <div>
+            <label>Meta Title</label> <input type="text" value="@GameTitle" name="GameTitle" />
+            @Html.ValidationMessage("GameTitle")
+        </div>
+        <div>
+            <label>Meta Description</label>
+            <input type="text" value="@GameDescription" name="GameDescription" /> @Html.ValidationMessage("GameDescription")
+        </div>
+        <div>
+            <label>Text</label>
+            <textarea class="ckeditor" name="GameText">@GameText</textarea> @Html.ValidationMessage("GameText")
+        </div> <input type="submit" />
+    </fieldset>
+</form>
+<script src="/ckeditor/ckeditor.js"></script>

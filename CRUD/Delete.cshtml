@@ -1,0 +1,37 @@
+﻿@{
+    var Id = Request["Id"];
+    if (!Id.IsInt())
+    {
+        Response.Redirect("~/");
+    }
+    var db = Database.Open("Games");
+    var SQLDELETE = "DELETE FROM Games WHERE Id=@0";
+
+    if (IsPost)
+    {
+        try
+        {
+            db.Execute(SQLDELETE, Id);
+            Response.Redirect("~/");
+        }
+        catch (Exception ex)
+        { Response.Write(ex.Message); }
+    }
+}
+
+
+<script type="text/javascript">
+function goBack()
+{
+window.location = "@Request["returnurl"]";
+}
+</script>
+
+<form method="post">
+    <fieldset>
+        <legend>Delete Data</legend>
+        <p>Are you sure you wish to delete this page?</p>
+        <input type="submit" value="Yes" />
+        <input type="button" value="No" onclick="goBack();" />
+    </fieldset>
+</form>

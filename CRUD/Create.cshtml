@@ -1,0 +1,63 @@
+﻿@{
+    var GameName = "";
+    DateTime ReleaseDate = DateTime.UtcNow; //Universal Time on Server
+    var GameTitle = "";
+    var GameDescription = "";
+    var GameText = "";
+
+    if (IsPost)
+    {
+        GameName = Request["GameName"];
+        GameTitle = Request["GameTitle"];
+        GameDescription = Request["GameDescription"];
+        GameText = Request.Unvalidated["GameText"];
+
+        Validation.RequireFields("GameName", "GameTitle", "GameDescription", "GameText");
+
+        var SQLInsert = "INSERT INTO Games (GameName, ReleaseDate, Title, Description, Text) VALUES (@0,@1,@2,@3,@4)";
+
+        if (Validation.IsValid())
+        {
+            try
+            {
+                var db = Database.Open("Games"); //in Web.Config
+                db.Execute(SQLInsert, GameName, ReleaseDate, GameTitle, GameDescription, GameText);
+                Response.Write("Data Saved!");
+            }
+            catch (Exception ex)
+            {
+                Response.Write(ex.Message);
+            }
+        }
+    }
+}
+
+
+<form method="post">
+    <fieldset>
+        <legend>Insert Data</legend>
+        @Html.ValidationSummary(true)
+        <div>
+            <label>Game Name</label>
+            <input type="text" value="@GameName" name="GameName" />
+            @Html.ValidationMessage("GameName")
+        </div>
+
+        <div>
+            <label>Meta Title</label>
+            <input type="text" value="@GameTitle" name="GameTitle" />
+            @Html.ValidationMessage("GameTitle")
+        </div>
+        <div>
+            <label>Meta Description</label>
+            <input type="text" value="@GameDescription" name="GameDescription" />
+            @Html.ValidationMessage("GameDescription")
+        </div>
+        <div>
+            <label>Text</label>
+            <textarea class="ckeditor" name="GameText">@GameText</textarea>
+            @Html.ValidationMessage("GameText")
+        </div> <input type="submit" />
+    </fieldset>
+</form>
+<script src="/ckeditor/ckeditor.js"></script>

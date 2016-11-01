@@ -1,0 +1,33 @@
+﻿@*@helper myDiv ()
+
+{ <div style="width: 250px;height: 500px;background-color: #ff6a00;padding: 20px;color: #fff;"> 
+    @DateTime.Now 
+</div> }*@
+
+@helper myGames(string[] games)
+{ <ul>     
+    @foreach (var g in games)
+    {
+    <li>@g</li>     
+    } 
+    </ul> 
+}
+
+@helper myNumbers(int startpoint, int endpoint = 25)
+{ <ul> 
+    @for (int i = startpoint; i < endpoint; i++)
+{
+    <li>@i</li> } 
+</ul> }
+
+@helper methodOverloading(string name)
+{
+    @name
+}
+
+@helper methodOverloading(int num)
+{
+    @num
+}
+
+

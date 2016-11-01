@@ -1,0 +1,21 @@
+﻿@{ 
+    var db = Database.Open("Games");
+
+    var SQLREAD = "SELECT * FROM Games";
+    var data = db.Query(SQLREAD);
+
+}
+
+<h2>Recent Games in Database</h2>
+
+<ul>
+    @foreach (var game in data)
+    {
+        <li><a href="/games/@game.GameName">@game.GameName</a></li>
+    }
+
+</ul>
+
+
+
+

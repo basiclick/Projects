@@ -1,0 +1,40 @@
+﻿@{ 
+    Layout = "~/shared/_SiteLayout.cshtml";
+    if (IsPost)
+    { var layout = Request["layout"];
+        if (layout == "Dark")
+        { Response.Cookies["Theme"].Value = "Dark";
+            Response.Cookies["Theme"].Expires = DateTime.Now.AddYears(1);
+        }
+        else if (layout == "Default")
+        {
+            Response.Cookies["Theme"].Expires = DateTime.Now.AddYears(-1);
+        }
+
+
+    }
+  }
+
+<form method="post"> 
+    <fieldset> 
+    <legend>Choose Layout</legend> 
+    <label>Select Layout</label> 
+    <select name="layout"> 
+        <option value="Dark">Dark</option> 
+        <option value="Default">Default</option> 
+        </select> <input type="submit" /> 
+    </fieldset> 
+</form>
+
+@*@Helper.myDiv()*@
+
+@{     string[] games = {"Infamous", "Uncharted", "GTA5", "NFS", "Fifa"}; 
+           @Helper.myGames(games)
+  }
+
+@Helper.myNumbers(5)
+@Helper.myNumbers(1, 20)
+
+@Helper.methodOverloading("Rich")
+@Helper.methodOverloading(10)
+

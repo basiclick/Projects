@@ -1,0 +1,15 @@
+﻿@if (Request.Cookies["Theme"] != null)
+{
+    //MAKE SURE COOKIE EXIST 
+    if (Request.Cookies["Theme"].Value == "Dark")
+    {
+        //READ COOKIE VALUE 
+        <link href="~/Shared/Site2.css" rel="stylesheet" /> 
+    }
+    else
+    { <link href="~/Shared/Site.css" rel="stylesheet" /> 
+        //IF COOKIES DOES NOT EXIST LOAD DEFAULT STYLESHEET }
+    }
+}
+
+@RenderBody();
