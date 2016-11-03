@@ -196,8 +196,21 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CompletedTrainingController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\ContactTypeController.cs" />
+    <Compile Include="Controllers\CourtOrderedController.cs" />
+    <Compile Include="Controllers\EthnicityController.cs" />
+    <Compile Include="Controllers\ForeignLanguageController.cs" />
+    <Compile Include="Controllers\GroupContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HoursWorkedController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\PositionLocationController.cs" />
+    <Compile Include="Controllers\VolunteerController.cs" />
+    <Compile Include="Controllers\VolunteerGroupController.cs" />
+    <Compile Include="Controllers\VolunteerLanguageController.cs" />
+    <Compile Include="Controllers\VolunteerTrainingController.cs" />
     <Compile Include="DAL\CCSContext.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -205,6 +218,14 @@
     <Compile Include="Migrations\201611012025595_seedOne.cs" />
     <Compile Include="Migrations\201611012025595_seedOne.Designer.cs">
       <DependentUpon>201611012025595_seedOne.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611021954161_initialseed.cs" />
+    <Compile Include="Migrations\201611021954161_initialseed.Designer.cs">
+      <DependentUpon>201611021954161_initialseed.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611022328380_initialseed2.cs" />
+    <Compile Include="Migrations\201611022328380_initialseed2.Designer.cs">
+      <DependentUpon>201611022328380_initialseed2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -286,6 +307,71 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\CompletedTraining\Create.cshtml" />
+    <Content Include="Views\CompletedTraining\Delete.cshtml" />
+    <Content Include="Views\CompletedTraining\Details.cshtml" />
+    <Content Include="Views\CompletedTraining\Edit.cshtml" />
+    <Content Include="Views\CompletedTraining\Index.cshtml" />
+    <Content Include="Views\Contact\Create.cshtml" />
+    <Content Include="Views\Contact\Delete.cshtml" />
+    <Content Include="Views\Contact\Details.cshtml" />
+    <Content Include="Views\Contact\Edit.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\ContactType\Create.cshtml" />
+    <Content Include="Views\ContactType\Delete.cshtml" />
+    <Content Include="Views\ContactType\Details.cshtml" />
+    <Content Include="Views\ContactType\Edit.cshtml" />
+    <Content Include="Views\ContactType\Index.cshtml" />
+    <Content Include="Views\CourtOrdered\Create.cshtml" />
+    <Content Include="Views\CourtOrdered\Delete.cshtml" />
+    <Content Include="Views\CourtOrdered\Details.cshtml" />
+    <Content Include="Views\CourtOrdered\Edit.cshtml" />
+    <Content Include="Views\CourtOrdered\Index.cshtml" />
+    <Content Include="Views\Ethnicity\Create.cshtml" />
+    <Content Include="Views\Ethnicity\Delete.cshtml" />
+    <Content Include="Views\Ethnicity\Details.cshtml" />
+    <Content Include="Views\Ethnicity\Edit.cshtml" />
+    <Content Include="Views\Ethnicity\Index.cshtml" />
+    <Content Include="Views\ForeignLanguage\Create.cshtml" />
+    <Content Include="Views\ForeignLanguage\Delete.cshtml" />
+    <Content Include="Views\ForeignLanguage\Details.cshtml" />
+    <Content Include="Views\ForeignLanguage\Edit.cshtml" />
+    <Content Include="Views\ForeignLanguage\Index.cshtml" />
+    <Content Include="Views\GroupContact\Create.cshtml" />
+    <Content Include="Views\GroupContact\Delete.cshtml" />
+    <Content Include="Views\GroupContact\Details.cshtml" />
+    <Content Include="Views\GroupContact\Edit.cshtml" />
+    <Content Include="Views\GroupContact\Index.cshtml" />
+    <Content Include="Views\HoursWorked\Create.cshtml" />
+    <Content Include="Views\HoursWorked\Delete.cshtml" />
+    <Content Include="Views\HoursWorked\Details.cshtml" />
+    <Content Include="Views\HoursWorked\Edit.cshtml" />
+    <Content Include="Views\HoursWorked\Index.cshtml" />
+    <Content Include="Views\PositionLocation\Create.cshtml" />
+    <Content Include="Views\PositionLocation\Delete.cshtml" />
+    <Content Include="Views\PositionLocation\Details.cshtml" />
+    <Content Include="Views\PositionLocation\Edit.cshtml" />
+    <Content Include="Views\PositionLocation\Index.cshtml" />
+    <Content Include="Views\Volunteer\Create.cshtml" />
+    <Content Include="Views\Volunteer\Delete.cshtml" />
+    <Content Include="Views\Volunteer\Details.cshtml" />
+    <Content Include="Views\Volunteer\Edit.cshtml" />
+    <Content Include="Views\Volunteer\Index.cshtml" />
+    <Content Include="Views\VolunteerGroup\Create.cshtml" />
+    <Content Include="Views\VolunteerGroup\Delete.cshtml" />
+    <Content Include="Views\VolunteerGroup\Details.cshtml" />
+    <Content Include="Views\VolunteerGroup\Edit.cshtml" />
+    <Content Include="Views\VolunteerGroup\Index.cshtml" />
+    <Content Include="Views\VolunteerLanguage\Create.cshtml" />
+    <Content Include="Views\VolunteerLanguage\Delete.cshtml" />
+    <Content Include="Views\VolunteerLanguage\Details.cshtml" />
+    <Content Include="Views\VolunteerLanguage\Edit.cshtml" />
+    <Content Include="Views\VolunteerLanguage\Index.cshtml" />
+    <Content Include="Views\VolunteerTraining\Create.cshtml" />
+    <Content Include="Views\VolunteerTraining\Delete.cshtml" />
+    <Content Include="Views\VolunteerTraining\Details.cshtml" />
+    <Content Include="Views\VolunteerTraining\Edit.cshtml" />
+    <Content Include="Views\VolunteerTraining\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -301,6 +387,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201611012025595_seedOne.resx">
       <DependentUpon>201611012025595_seedOne.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611021954161_initialseed.resx">
+      <DependentUpon>201611021954161_initialseed.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611022328380_initialseed2.resx">
+      <DependentUpon>201611022328380_initialseed2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
