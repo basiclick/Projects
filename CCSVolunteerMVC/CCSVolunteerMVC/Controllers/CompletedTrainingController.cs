@@ -47,7 +47,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "completedTrainingID,volID,volTrnID,cmpTrnDate,cmpTrnComments")] CompletedTraining completedTraining)
+        public ActionResult Create([Bind(Include = "completedTrainingID,volunteerID,volunteerTrainingID,cmpTrnDate,cmpTrnComments")] CompletedTraining completedTraining)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "completedTrainingID,volID,volTrnID,cmpTrnDate,cmpTrnComments")] CompletedTraining completedTraining)
+        public ActionResult Edit([Bind(Include = "completedTrainingID,volunteerID,volunteerTrainingID,cmpTrnDate,cmpTrnComments")] CompletedTraining completedTraining)
         {
             if (ModelState.IsValid)
             {

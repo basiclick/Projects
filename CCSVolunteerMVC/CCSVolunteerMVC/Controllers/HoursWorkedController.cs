@@ -47,7 +47,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "hoursWorkedID,posLocationID,hrsWrkdIDType,hrsWrkdTimeIn,hrsWrkdTimeOut,userAcctID,modifiedOn,hrsWrkedSchedDate,volunteerID,volunteerGroupID,hrsWrkdQty")] HoursWorked hoursWorked)
+        public ActionResult Create([Bind(Include = "hoursWorkedID,positionLocationID,hrsWrkdIDType,hrsWrkdTimeIn,hrsWrkdTimeOut,userAcctID,modifiedOn,hrsWrkedSchedDate,volunteerID,volunteerGroupID,hrsWrkdQty")] HoursWorked hoursWorked)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "hoursWorkedID,posLocationID,hrsWrkdIDType,hrsWrkdTimeIn,hrsWrkdTimeOut,userAcctID,modifiedOn,hrsWrkedSchedDate,volunteerID,volunteerGroupID,hrsWrkdQty")] HoursWorked hoursWorked)
+        public ActionResult Edit([Bind(Include = "hoursWorkedID,positionLocationID,hrsWrkdIDType,hrsWrkdTimeIn,hrsWrkdTimeOut,userAcctID,modifiedOn,hrsWrkedSchedDate,volunteerID,volunteerGroupID,hrsWrkdQty")] HoursWorked hoursWorked)
         {
             if (ModelState.IsValid)
             {

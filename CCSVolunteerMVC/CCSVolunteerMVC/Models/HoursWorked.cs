@@ -9,7 +9,7 @@ namespace CCSVolunteerMVC.Models
     public class HoursWorked
     {
         public int hoursWorkedID { get; set; }
-        public int posLocationID { get; set; }
+        public int positionLocationID { get; set; }
         public virtual PositionLocation positionLocation { get; set; }
 
         [StringLength(1)]
@@ -20,12 +20,12 @@ namespace CCSVolunteerMVC.Models
 
         [Display(Name = "Hours Worked Time In")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:hh:mm:ss tt}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = @"{0:hh\-mm}", ApplyFormatInEditMode = true)]
         public DateTime hrsWrkdTimeIn { get; set; }
 
         [Display(Name = "Hours Worked Time Out")]
         [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:hh:mm:ss tt}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = @"{0:hh\-mm}", ApplyFormatInEditMode = true)]
         public DateTime hrsWrkdTimeOut { get; set; }
         public int userAcctID { get; set; }
         //todo find out what object to tie to userAcctID for code first

@@ -47,7 +47,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "contactID,contTypeID,volID,contactInfo,contCanContact")] Contact contact)
+        public ActionResult Create([Bind(Include = "contactID,contactTypeID,volunteerID,contactInfo,contCanContact")] Contact contact)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "contactID,contTypeID,volID,contactInfo,contCanContact")] Contact contact)
+        public ActionResult Edit([Bind(Include = "contactID,contactTypeID,volunteerID,contactInfo,contCanContact")] Contact contact)
         {
             if (ModelState.IsValid)
             {

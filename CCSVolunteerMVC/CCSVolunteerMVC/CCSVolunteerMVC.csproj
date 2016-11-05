@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201611051923296_initialseed2.Designer.cs">
       <DependentUpon>201611051923296_initialseed2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611052024580_initialseed3.cs" />
+    <Compile Include="Migrations\201611052024580_initialseed3.Designer.cs">
+      <DependentUpon>201611052024580_initialseed3.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\CompletedTraining.cs" />
@@ -386,6 +390,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611051923296_initialseed2.resx">
       <DependentUpon>201611051923296_initialseed2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611052024580_initialseed3.resx">
+      <DependentUpon>201611052024580_initialseed3.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

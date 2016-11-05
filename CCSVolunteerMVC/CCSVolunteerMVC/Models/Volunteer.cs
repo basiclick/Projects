@@ -23,7 +23,7 @@ namespace CCSVolunteerMVC.Models
         public int volsCourtOrdered { get; set; }
         public virtual ICollection<CourtOrdered> courtOrdereds { get; set; }
 
-        public virtual int? ethID { get; set; }
+        public virtual int? ethnicityID { get; set; }
 
         public virtual Ethnicity ethnicity { get; set; }
 

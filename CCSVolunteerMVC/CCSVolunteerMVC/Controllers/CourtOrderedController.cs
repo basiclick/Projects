@@ -47,7 +47,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "courtOrderedID,volID,crtOrderCaseNumber,crtOrderedHoursRequired,crtOrderedStartDate,crtOrderedSexOrViolentCrime,crtOrderedOneMonthLimit")] CourtOrdered courtOrdered)
+        public ActionResult Create([Bind(Include = "courtOrderedID,volunteerID,crtOrderCaseNumber,crtOrderedHoursRequired,crtOrderedStartDate,crtOrderedSexOrViolentCrime,crtOrderedOneMonthLimit")] CourtOrdered courtOrdered)
         {
             if (ModelState.IsValid)
             {
@@ -79,7 +79,7 @@ namespace CCSVolunteerMVC.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "courtOrderedID,volID,crtOrderCaseNumber,crtOrderedHoursRequired,crtOrderedStartDate,crtOrderedSexOrViolentCrime,crtOrderedOneMonthLimit")] CourtOrdered courtOrdered)
+        public ActionResult Edit([Bind(Include = "courtOrderedID,volunteerID,crtOrderCaseNumber,crtOrderedHoursRequired,crtOrderedStartDate,crtOrderedSexOrViolentCrime,crtOrderedOneMonthLimit")] CourtOrdered courtOrdered)
         {
             if (ModelState.IsValid)
             {
