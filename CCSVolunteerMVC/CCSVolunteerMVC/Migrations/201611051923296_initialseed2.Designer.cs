@@ -7,13 +7,13 @@ namespace CCSVolunteerMVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class seedOne : IMigrationMetadata
+    public sealed partial class initialseed2 : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(seedOne));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initialseed2));
         
         string IMigrationMetadata.Id
         {
-            get { return "201611012025595_seedOne"; }
+            get { return "201611051923296_initialseed2"; }
         }
         
         string IMigrationMetadata.Source

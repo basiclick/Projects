@@ -12,7 +12,7 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.posID)
+            @Html.DisplayNameFor(model => model.posLocationID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.hrsWrkdIDType)
@@ -33,10 +33,10 @@
             @Html.DisplayNameFor(model => model.hrsWrkedSchedDate)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.volID)
+            @Html.DisplayNameFor(model => model.volunteerID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.volGrpID)
+            @Html.DisplayNameFor(model => model.volunteerGroupID)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.hrsWrkdQty)
@@ -47,7 +47,7 @@
 @foreach (var item in Model) {
     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.posID)
+            @Html.DisplayFor(modelItem => item.posLocationID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.hrsWrkdIDType)
@@ -68,10 +68,10 @@
             @Html.DisplayFor(modelItem => item.hrsWrkedSchedDate)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.volID)
+            @Html.DisplayFor(modelItem => item.volunteerID)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.volGrpID)
+            @Html.DisplayFor(modelItem => item.volunteerGroupID)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.hrsWrkdQty)

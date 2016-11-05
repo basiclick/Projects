@@ -10,11 +10,11 @@ namespace CCSVolunteerMVC.Models
     {
         public int completedTrainingID { get; set; }
 
-        public int volID { get; set; }
+        public int volunteerID { get; set; }
 
         public virtual Volunteer volunteer { get; set; }
 
-        public int volTrnID { get; set; }
+        public int volunteerTrainingID { get; set; }
 
         public virtual VolunteerTraining volunteerTraining { get; set; }
 
@@ -24,7 +24,7 @@ namespace CCSVolunteerMVC.Models
         public DateTime cmpTrnDate { get; set; }
 
         [Display(Name = "Completed Training Comments")]
-        [StringLength(100, MinimumLength = 1)]
+        [StringLength(100)]
         public string cmpTrnComments { get; set; }
 
 
